@@ -1,0 +1,36 @@
+{{! Previous/next page links - only displayed on page 2+ }}
+<!--<div class="extra-pagination inner">
+    {{pagination}}
+</div>-->
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+        <div class="row column-padded">
+            <div class="col-lg-2 text-center">
+                <p class="dates">{{date format="DD MMM YYYY"}}</p>
+            </div>
+
+            <div class="col-lg-8">
+                <h3 class="text-center no-margin"><a href="{{url}}">{{title}}</a></h3>
+            </div>
+
+            <div class="col-lg-2">
+                <p class="dates">{{date published_at format="h:hh"}}<br>{{date published_at format="A"}}<br>{{date published_at format="YYYY"}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 column-padded">
+                <section class="post-content">
+                    <p>{{content}} <a class="read-more" href="{{url}}">&raquo; READ MORE</a>
+
+                    </p>
+                </section>
+            </div>
+        </div>
+<hr>
+
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+<span class="text-center">{{pagination}}</span>

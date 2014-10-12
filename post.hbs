@@ -1,0 +1,146 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<!--<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        <a class="back-button icon-arrow-left" href="{{@blog.url}}">Home</a>
+        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+    </nav>
+</header>-->
+
+<header>
+        <!-- Logo -->
+        <div class="extinctly-logo text-center img responsive">
+            <a href="index.html">
+            <img src="{{asset "img/extinction_150.png" }}">
+            </a>
+        </div>
+        <div class="nav-wrapper">
+            <!-- Navbar start -->
+            <div class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="navigation" class="nav navbar-nav">
+                        <div class="row">
+                            <li class="col-lg-2 col-lg-offset-1 text-center"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="col-lg-2 text-center"><a href="map.html">World Map</a></li>
+                            <li class="col-lg-2 text-center"><a href="participants.html">Participants</a></li>
+                            <li class="col-lg-2 text-center dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Live <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="text-center"><a href="{{url}}blog.html">Blog</a></li>
+                                    <li class="text-center"><a href="stream.html">Stream</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-lg-2 text-center"><a href="casestudies.html">Case Studies</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- /navbar -->
+        </div>
+        <!--<a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>-->
+
+        <!--<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>-->
+        <hr id="live">
+
+</header>
+
+<div class="container blog">
+
+    <main class="content" role="main">
+
+        <article class="{{post_class}}">
+
+            <!--<header class="post-header">
+                <h1 class="post-title">{{title}}</h1>
+                <section class="post-meta">
+                    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+                </section>
+            </header>
+
+            <section class="post-content">
+                {{content}}
+            </section>-->
+
+            <div class="row column-padded">
+                <div class="col-lg-2 text-center">
+                    <p class="dates">{{date format="DD MMM YYYY"}}</p>
+                </div>
+
+                <div class="col-lg-8">
+                    <h3 class="text-center no-margin">{{title}}</h3>
+                </div>
+
+                <div class="col-lg-2">
+                    <p class="dates">{{date published_at format="h:hh"}}<br>{{date published_at format="A"}}<br>{{date published_at format="YYYY"}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 column-padded">
+                    <section class="post-content">
+                        <p>{{content}}
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer class="post-footer text-center">
+
+            {{! Everything inside the #author tags pulls data from the author }}
+            {{#author}}
+
+                {{#if image}}
+                <figure class="author-image">
+                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                </figure>
+                {{/if}}
+
+                <section class="author">
+                    <h4>BY <a href="{{url}}">{{name}}</a></h4>
+
+                    <div class="author-meta">
+                        {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+                        {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    </div>
+                </section>
+
+            {{/author}}
+
+                <section class="share">
+                    <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <i class="fa fa-twitter fa-lg"></i>
+                    </a>&nbsp;
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <i class="fa fa-facebook fa-lg"></i>
+                    </a>&nbsp;
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <i class="fa fa-google-plus fa-lg"></i>
+                    </a>
+                </section>
+
+            </footer>
+
+    </article>
+
+</main>
+
+</div> <!-- /container -->
+
+{{/post}}

@@ -1,0 +1,95 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+<header>
+        <!-- Logo -->
+        <div class="extinctly-logo text-center img responsive">
+            <a href="index.html">
+            <img src="{{asset "img/extinction_150.png" }}">
+            </a>
+        </div>
+        <div class="nav-wrapper">
+            <!-- Navbar start -->
+            <div class="navbar navbar-inverse">
+                <div class="navbar-header">
+                    <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul id="navigation" class="nav navbar-nav">
+                        <div class="row">
+                            <li class="col-lg-2 col-lg-offset-1 text-center"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="col-lg-2 text-center"><a href="map.html">World Map</a></li>
+                            <li class="col-lg-2 text-center"><a href="participants.html">Participants</a></li>
+                            <li class="col-lg-2 text-center dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Live <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="text-center"><a href="{{url}}blog.html">Blog</a></li>
+                                    <li class="text-center"><a href="stream.html">Stream</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-lg-2 text-center"><a href="casestudies.html">Case Studies</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!-- /navbar -->
+        </div>
+
+        <h2 class="text-center page-title">EXTINCTION LIVE</h2>
+        <hr id="live">
+            
+        <!--<a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>-->
+
+        <!--<a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>-->
+</header>
+
+<div class="container blog">
+
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+    {{! Everything inside the #post tags pulls data from the post }}
+    {{#post}}
+
+<!-- <h1 class="post-title">{{title}}</h1>
+
+        <section class="post-content">
+            {{content}}
+        </section> -->
+
+        <div class="row column-padded">
+            <div class="col-lg-2 text-center">
+                <p class="dates">{{date format="DD MMM YYYY"}}</p>
+            </div>
+
+            <div class="col-lg-8">
+                <h3 class="text-center no-margin">{{title}}<br>{{author}}</h3>
+            </div>
+
+            <div class="col-lg-2">
+                <p class="dates">{{date published_at format="h:hh"}}<br>{{date published_at format="A"}}<br>{{date published_at format="YYYY"}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 column-padded">
+                <section class="post-content">
+                    <p>{{content}} <a class="read-more" href="{{url}}">&raquo; READ MORE</a>
+
+                    </p>
+                </section>
+            </div>
+        </div>
+        <hr>
+
+    {{/post}}
+    </article>
+
+</main>
+
+</div> <!--container -->
