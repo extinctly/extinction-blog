@@ -694,6 +694,10 @@ footer .row {
   text-decoration: underline;
 }
 
+.content img {
+  max-width: 600px;
+}
+
 /* new MODS
 -------------------------------------------------- */
 
