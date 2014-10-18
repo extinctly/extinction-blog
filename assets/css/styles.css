@@ -45,18 +45,6 @@
   font-weight: normal;
   font-style: normal;
 }
-/* First typeface
-@font-face {
-    font-family: 'marathonbold';
-    src: url('../fonts/marathon_l4_bold-webfont.eot');
-    src: url('../fonts/marathon_l4_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/marathon_l4_bold-webfont.woff2') format('woff2'),
-         url('../fonts/marathon_l4_bold-webfont.woff') format('woff'),
-         url('../fonts/marathon_l4_bold-webfont.ttf') format('truetype'),
-         url('../fonts/marathon_l4_bold-webfont.svg#marathonbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}*/
 @font-face {
   font-family: 'nebula_iiregular';
   src: url('../fonts/nebula-webfont.eot');
@@ -92,39 +80,31 @@ p {
 p a {
   text-decoration: underline;
 }
-.footer-main {
+footer {
   background: #020202 !important;
   margin: 30px 0 0 0;
   text-align: center;
 }
-.footer-main h3 {
+footer h3 {
   margin: 0;
 }
-.footer-main img {
+footer img {
   max-height: 35px;
 }
-.footer-main a {
+footer a {
   opacity: .7;
 }
-.footer-main a:hover {
+footer a:hover {
   opacity: 1;
 }
-.footer-main .col-md-3 {
+footer .col-md-3 {
   padding: 20px 0 40px 0;
 }
-.footer-main i {
+footer i {
   margin-left: 10px;
 }
-.footer-main .row {
+footer .row {
   margin: 0;
-}
-
-.author a {
-  text-decoration: underline;
-}
-.page-number {
-  text-transform: uppercase;
-  text-align: center !important;
 }
 /* CUSTOMIZE THE BOOTSTRAP NAVBAR
 -------------------------------------------------- */
@@ -238,7 +218,7 @@ p a {
   top: 50%;
   font-size: 24px;
   z-index: 10;
-  padding-top: 0px;
+  padding-top: 20px;
   padding-bottom: 5px;
   color: #f1f2d9;
   text-align: center;
@@ -256,7 +236,7 @@ p a {
   position: absolute;
   top: 0;
   left: 0;
-  min-height: 300px;
+  min-height: 400px;
 }
 .carousel-indicators li {
   color: #f1f2d9;
@@ -296,23 +276,42 @@ p a {
 .carousel-control .glyphicon-chevron-left {
   left: 85%;
 }
-/* Isotope
+/* ISOTOPE
 ------------------------- */
 .item {
-  margin: 5px;
+  /* margin: 20px 8px; */
+  margin-bottom: 40px;
+}
+.item img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 150px;
+  max-width: 200px;
 }
 .info-overlay h3 {
   margin-bottom: 0;
 }
 .info-overlay {
-  background: transparent;
-  bottom: 0;
-  padding: 0;
-  position: absolute;
-  width: 100%;
+  background: #020202;
+  //bottom: 0;
+  padding-top: 5px;
+  // position: absolute;
+  font-family: 'marathonbold';
+  font-size: 12px;
+  text-align: center;
+  opacity: .9;
 }
 /* CUSTOM
 ------------------------- */
+.extinctly-logo {
+  background: #020202;
+  margin: 35px 0 10px 0;
+  height: 50px;
+}
+.extinctly-logo img {
+  max-height: 50px;
+}
 .container {
   padding: 0 150px;
 }
@@ -323,24 +322,74 @@ p a {
   font-size: 14px;
   font-weight: normal;
 }
+.page-title {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+.extinctly-rotate {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 70px;
+  margin-bottom: 0;
+}
+.rotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+.rotate-texts {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: 85% 50%;
+  -moz-transform-origin: 85% 50%;
+  -ms-transform-origin: 85% 50%;
+  -o-transform-origin: 85% 50%;
+  transform-origin: 85% 50%;
+  margin-top: 70%;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+/* CONTACT
+-------------------------------------------------- */
 #contact i {
   margin-left: 10px;
 }
+#contact {
+  max-height: 100%;
+}
 #contact .form-group {
   font-family: 'Times';
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #f1f2d9;
 }
-.extinctly-logo {
+#contact .form-group .form-control {
+  font-family: 'Times';
+  text-align: center;
+}
+#contact p {
+  text-align: center;
+}
+#contact button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   background: #020202;
-  margin: 0;
-  padding: 35px 0 10px 0;
+  border: none;
 }
-.extinctly-logo img {
-  max-height: 100px;
-}
-.case-studies {
-  margin-top: 75px;
-  margin-bottom: 40px;
-}
+/* FILTERS
+-------------------- */
 #filters {
   width: 100%;
   font-size: 10px;
@@ -356,6 +405,10 @@ p a {
   padding-left: 0;
   padding-right: 0;
 }
+#filters img {
+  max-height: 15px;
+  padding-right: 5px;
+}
 .column-title {
   margin-top: 0px;
   margin-bottom: 15px;
@@ -367,52 +420,79 @@ p a {
   margin: 0;
   padding: 0;
 }
-.page-title {
-  margin-top: 50px;
-  margin-bottom: 40px;
-}
+/* PAGES
+-------------------- */
 .home .col-sm-5 {
   padding: 0;
 }
 .home .col-sm-2 {
   padding: 0;
 }
-.extinctly-rotate {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 70px;
-  margin-bottom: 0;
-}
-.rotate {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  /* Should be unset in IE9+ I think. */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+.case-studies {
+  margin: 75px 0;
 }
 .blog {
   padding: 0 200px;
+}
+.texts {
+  padding: 0 200px;
+  margin-bottom: 75px;
+}
+.texts-gradient {
+  height: 30px;
+  width: 100%;
+  background-image: -moz-linear-gradient(top, #000000 100%, #000000 0%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.24, #000000), color-stop(0.62, #23ab11));
+  background-image: -webkit-linear-gradient(bottom, #000000 24%, #000000 62%);
+  background-image: -ms-linear-gradient(bottom, #000000 24%, #000000 62%);
+  background-image: linear-gradient(bottom, #000000 24%, #000000 62%);
+  background-image: -o-linear-gradient(bottom, #000000 24%, #000000 62%);
+}
+.main-texts {
+  margin-top: 800px;
+}
+.essay-title {
+  font-size: 72px;
+  padding-top: 50px;
+}
+.essay-name {
+  font-family: 'nebula_iiregular';
+  font-size: 32px;
 }
 #live {
   background: #f1f2d9;
   height: 5px;
 }
+.livestream iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.livestream-text .row {
+  margin-top: 10px;
+}
+
+.livestream-text h2 {
+  margin-top: 20px;
+}
+
+.livestream-text .dates {
+  font-size: 55px;
+}
+
+.livestream-text img {
+  margin-top: 40px;
+}
+
 #posts {
   margin-bottom: 50px;
 }
 #dashboard {
   visibility: hidden;
 }
-/* Participants section
----------------------------------------- */
 #participants {
   margin: 50px 0;
 }
@@ -441,11 +521,24 @@ p a {
   margin-bottom: 25px;
 }
 /* MAP
-------------------------- */
+-------------------------------------------------- */
 #map {
-  /* position:absolute; top:0; bottom:0; width:100%; */
   width: 100%;
   height: 600px;
+}
+.leaflet-container h1,
+.leaflet-container h2,
+.leaflet-container h3 {
+  font-size: 20px;
+}
+.leaflet-container p {
+  font-size: 14px;
+}
+.leaflet-bar,
+.leaflet-control-layers {
+  background-color: #4f4f4f;
+  border: 1px solid #020202;
+  opacity: .9;
 }
 .custom-popup .leaflet-popup-content-wrapper {
   background: #020202;
@@ -455,7 +548,7 @@ p a {
   border: 1px solid #f1f2d9;
 }
 .custom-popup .leaflet-popup-content-wrapper a {
-  font-size: 12px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #f1f2d9;
 }
@@ -474,7 +567,7 @@ p a {
 .custom-popup .leaflet-control-layers {
   background: #020202;
   color: #f1f2d9;
-  font-family: 'marathonbold';
+  font-family: 'nebula_iiregular';
   text-transform: uppercase;
   font-size: 12px;
   line-height: 24px;
@@ -494,13 +587,8 @@ p a {
   color: #020202;
   border-top-color: #020202;
 }
-.leaflet-fusesearch-panel .content {
-  background: #020202;
-  color: #f1f2d9;
-}
-.leaflet-fusesearch-panel .result-item {
-  color: #f1f2d9;
-}
+/* PARTICIPANTS
+-------------------- */
 #overlay {
   position: absolute;
   top: 0;
@@ -531,6 +619,130 @@ p a {
 .participants-filters li:hover {
   color: #f1f2d9;
 }
+/* MODAL MODS
+-------------------------------------------------- */
+.modal-open .modal {
+  background: #020202;
+  width: 100%;
+  margin-bottom: 100px;
+  margin: 0;
+}
+.modal-dialog {
+  background: #020202;
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+.modal-content {
+  background: #020202;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  border: none;
+  box-shadow: none;
+}
+.modal-header {
+  background: #020202;
+  opacity: .9;
+  border-bottom: 8px solid #f1f2d9;
+}
+.modal-body {
+  background: #020202;
+  border: none;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  margin-bottom: 70px;
+}
+.modal-footer {
+  background: #020202;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  border-top: 5px solid #f1f2d9;
+  opacity: .9;
+}
+.modal-body iframe {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 500px;
+  padding: 20px 0;
+}
+.modal-body .lead {
+  text-align: center;
+}
+.modal-body-container {
+  background: #020202;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 100%;
+}
+.modal-body-container img {
+}
+.kev {
+  background: #FFF !important;
+  color: #000;
+  border: none !important;
+}
+
+.kev a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* new MODS
+-------------------------------------------------- */
+
+.fixed-nav-offset {
+  padding-top: 250px;
+}
+
+.fixed-nav-body {
+  margin-top: 250px;
+}
+
+.essay-text {
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+
+.ongoing-collapse-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 125px;
+  padding: 0 0 40px 0;
+}
+
+.modal-body p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+}
+
+.bio {
+  font-size: 14px;
+  max-width: 260px;
+}
+
+.subdomain {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.modal-body .kev {
+  padding-bottom: 30px;
+}
+
+.modal-header .kev .close {
+  color: #020202;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media (min-width: 768px) {
@@ -554,7 +766,15 @@ p a {
     line-height: 1.4;
   }
 }
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 25px;
+  }
+}
 @media screen and (max-device-width: 500px) {
+  #myCarousel {
+    visibility: none;
+  }
   .container {
     padding: 0 25px;
   }
@@ -564,13 +784,12 @@ p a {
   .column-padded {
     padding: 0;
   }
-  .footer-main {
+  footer {
     padding: 0;
   }
   .modal-body iframe,
   .modal-body img {
     max-width: 100%;
-    height: auto;
   }
   .nav-wrapper {
     padding: 0 0;
@@ -579,7 +798,7 @@ p a {
     margin: 0;
   }
   .extinctly-logo img {
-    max-height: 100px;
+    max-height: 70px;
   }
   .blog {
     margin: 0 15px;
@@ -600,18 +819,7 @@ p a {
     visibility: none;
     display: none;
   }
-}
-
-.post-meta {
-  text-transform: uppercase;
-}
-
-.post-meta a {
-  color: #f1f2d9;
-  opacity: 1 !important;
-  text-decoration: underline;
-}
-
-.blog img {
-  max-width: 100%;
+  .main-texts {
+    margin-top: 500px;
+  }
 }

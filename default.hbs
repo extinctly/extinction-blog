@@ -29,126 +29,91 @@
     {{! Everything else gets inserted here }}
     {{{body}}}
 
-    <div class="container">
-            <!-- FOOTER -->
-            <footer class="footer-main">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="http://www.serpentinegalleries.org/exhibitions-events/extinction-marathon" target="_blank">
-                        <img src="{{asset "img/serpentine_marathon.png"}}">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="http://www.thespace.org/" target="_blank">
-                        <img src="{{asset "img/thespace.jpg"}}">
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <h3>
-                            <a href="#contact" data-toggle="modal" data-target="#contact">CONTACT</a>
-                        </h3>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="https://twitter.com/hashtag/extinction" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a href="https://instagram.com/extinctionsites" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
-                        <a href="https://vimeo.com/serpentinegalleries" target="_blank"><i class="fa fa-vimeo-square fa-lg"></i></a>
-                        <a href="https://github.com/extinctly" target="_blank"><i class="fa fa-github fa-lg"></i></a>
-                    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="http://www.serpentinegalleries.org/exhibitions-events/extinction-marathon" target="_blank">
+                    <img src="<%- @site.url %>/images/serpentine_marathon.png">
+                    </a>
                 </div>
-            </footer>
-        </div>
-        <!-- /.container -->
-        <!-- Add contact modal -->
-        <div id="contact" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h2 class="modal-title">Contact</h2>
-                    </div>
-                    <div class="modal-body">
-                        <p class="lead">
-                            Suggest an extinction site, data source, case study, or other work.
-                        </p>
-                        <div class="form-group">
-                            <label class="sr-only" for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Project, artist, or organization name">
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label class="sr-only" for="location">Location</label>
-                                <input type="text" class="form-control" id="location" placeholder="Location">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label class="sr-only" for="cateogry">Category</label>
-                                <select id="category" class="form-control">
-                                    <option value="0">--Category--</option>
-                                    <option value="finite">Finite</option>
-                                    <option value="humanitarian">Humanitarian</option>
-                                    <option value="despair">Despair</option>
-                                    <option value="infrastructure">Infrastructure</option>
-                                    <option value="finance">Finance</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="sr-only" for="description_long">Description</label>
-                            <textarea type="text" rows="3" class="form-control" id="description_long" placeholder="Description"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input id="link1_url" class="form-control" type="url" placeholder="Link URL">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label class="sr-only" for="contact_email">Your contact information</label>
-                                <input type="email" class="form-control" id="contact_email" placeholder="Your email address">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" data-dismiss="modal" class="btn btn-primary pull-left" onclick="onSubmit()">Submit</button>
-                        <a href="https://twitter.com/hashtag/extinction" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                        <a href="https://instagram.com/extinctionsites" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
-                        <a href="https://vimeo.com/serpentinegalleries" target="_blank"><i class="fa fa-vimeo-square fa-lg"></i></a>
-                        <a href="https://github.com/extinctly" target="_blank"><i class="fa fa-github fa-lg"></i></a>
-                    </div>
+                <div class="col-md-3">
+                    <a href="http://www.thespace.org/" target="_blank">
+                    <img src="<%- @site.url %>/images/thespace.jpg">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <h3>
+                        <a href="#contact" data-toggle="modal" data-target="#contact">CONTACT</a>
+                    </h3>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://twitter.com/hashtag/extinction" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="https://instagram.com/extinctionsites" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a href="https://vimeo.com/serpentinegalleries" target="_blank"><i class="fa fa-vimeo-square fa-lg"></i></a>
+                    <a href="https://github.com/extinctly" target="_blank"><i class="fa fa-github fa-lg"></i></a>
                 </div>
             </div>
         </div>
-        <!-- contact modal -->
+    </footer>
+    <!-- /.container -->
+    <!-- Contact modal -->
+    <div id="contact" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h2 class="modal-title">Contact</h2>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">
+                        Suggest an extinction site, data source, case study, or other work.
+                    </p>
+                    <div class="form-group">
+                        <label class="sr-only" for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Project, artist, or organization name">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="location">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="description_long">Description</label>
+                        <textarea type="text" rows="3" class="form-control" id="description_long" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="link1_url">Link</label>
+                        <input id="link1_url" class="form-control" type="url" placeholder="Link URL">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="contact_email">Your contact information</label>
+                        <input type="email" class="form-control" id="contact_email" placeholder="Your email address">
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" data-dismiss="modal" class="btn btn-primary" onclick="onSubmit()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Contact modal -->
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- Firebase -->
         <script src='https://cdn.firebase.com/js/client/1.0.15/firebase.js'></script>
 
-        <!-- Extinct.ly analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-55658105-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-
-        <!-- The Space analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
-            { (i[r].q=i[r].q||[]).push(arguments)}
-            ,i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-49181439-1', 'auto',
-            { 'allowLinker': true }
-            );
-            ga('send', 'pageview');
-        </script>
+    <!-- Google Analytics -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-55658105-1', 'http://extinct.ly');
+        ga('send', 'pageview');
+        ga('create', 'UA-49181439-1', 'auto', { 'allowLinker': true, 'name' : 'the_space' });
+        ga('the_space.send', 'pageview');
+    </script>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
