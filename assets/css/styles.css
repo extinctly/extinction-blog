@@ -812,6 +812,9 @@ footer .row {
     margin-top: 20px;
     padding-bottom: 5px;
   }
+  .blog footer {
+    opacity: 1;
+  }
   .extinctly-rotate {
     margin-top: 200px;
   }
